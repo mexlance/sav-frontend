@@ -25,16 +25,17 @@ sap.ui.jsview("views.material", {
 		
 		// Se crea el objeto que almacenará los materiales
 		var mSettings = {
-			title : "Materiales",
-			visibleRowCount : 30,
+			title : "Zapatos",
+			visibleRowCount : 60,
 			firstVisibleRow : 1,
 			selectionMode : sap.ui.table.SelectionMode.Single
 		};
 		var oTable = new sap.ui.table.Table(this.createId("matTable"), mSettings);
 		//Definición de las columnas 
-		oTable.addColumn(oController.createColumn("mat_id","Material","100px"));//Material
-		oTable.addColumn(oController.createColumn("mat_des","Descripción","300px"));//Descripción
+		oTable.addColumn(oController.createColumn("mat_id","ID","100px"));//Material
+		oTable.addColumn(oController.createColumn("mat_des","Descripción","200px"));//Descripción
 		oTable.addColumn(oController.createColumn("mat_marca","Marca","150px"));//Marca
+		oTable.addColumn(oController.createColumn("mat_modelo","Modelo","100px"));//Modelo
 		
 		// Se obtienen los materiales
 		oController.getMateriales();

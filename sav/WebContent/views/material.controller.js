@@ -3,7 +3,7 @@ sap.ui.controller("views.material", {	/**
 										 * del backend
 										 */
 	getMateriales : function() {
-
+		
 		var matTable = this.byId("matTable");
 
 		// Se manda llamar la función en el backend
