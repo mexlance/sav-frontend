@@ -25,8 +25,8 @@ sap.ui.jsview("views.material", {
 		
 		// Se crea el objeto que almacenará los materiales
 		var mSettings = {
-			title : "Zapatos",
-			visibleRowCount : 60,
+			title : "Consulta ID",
+			visibleRowCount : 25,
 			firstVisibleRow : 1,
 			selectionMode : sap.ui.table.SelectionMode.Single
 		};
