@@ -26,13 +26,13 @@ sap.ui.jsview("views.index", {
 		        appTitle: "SAV - Sistema de Administración de Ventas",
 		        //appIcon: "images/SAPLogo.gif",
 		        //appIconTooltip: "SAP logo",
-		        showLogoutButton: false,
+		        showLogoutButton: true,
 		        showSearchTool: false,
 		        showInspectorTool: false,
 		        showFeederTool: false,
 		        worksetItems: [new sap.ui.ux3.NavigationItem("WI_home",{key:"wi_home",text:"Productos"})
-		                       //new sap.ui.ux3.NavigationItem("WI_1",{key:"wi_1",text:"Examples", subItems:[
-		                       //   new sap.ui.ux3.NavigationItem("WI_1_1",{key:"wi_1_1",text:"Text"}),
+		                      ,new sap.ui.ux3.NavigationItem("WI_1",{key:"wi_1",text:"Consultas", subItems:[
+		                           new sap.ui.ux3.NavigationItem("WI_1_1",{key:"wi_1_1",text:"Precios x cátalogo"})]})
 		                       //   new sap.ui.ux3.NavigationItem("WI_1_2",{key:"wi_1_2",text:"Button"}),
 		                       //   new sap.ui.ux3.NavigationItem("WI_1_3",{key:"wi_1_3",text:"Image"})]}),
 		                       //new sap.ui.ux3.NavigationItem("WI_API",{key:"wi_api",text:"API Documentation"})
@@ -69,12 +69,12 @@ sap.ui.jsview("views.index", {
 		};
 		var shell = new sap.ui.ux3.Shell(this.createId("shell"), mSettings);
 		aControls.push(shell);
-		//Se crea botón de prueba
-		var oButton = new sap.ui.commons.Button({
-			id : this.createId("MyButton"),
-			text : "Hello JS view"
-		});
-		aControls.push(oButton.attachPress(oController.doIt));
+//		//Se crea botón de prueba
+//		var oButton = new sap.ui.commons.Button({
+//			id : this.createId("MyButton"),
+//			text : "Hello JS view"
+//		});
+//		aControls.push(oButton.attachPress(oController.doIt));
 		return aControls;
 	}
 

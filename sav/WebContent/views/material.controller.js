@@ -1,7 +1,8 @@
-sap.ui.controller("views.material", {	/**
-										 * Función para obtener los materiales
-										 * del backend
-										 */
+sap.ui.controller("views.material", {	
+	/**
+	 *Función para obtener los materiales
+	 * del backend
+	 */
 	getMateriales : function() {
 		
 		var matTable = this.byId("matTable");

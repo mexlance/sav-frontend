@@ -5,15 +5,28 @@ sap.ui.controller("views.index", {
 	},
 
 	workItemSelected: function(oEvent) {
-        var sId = oEvent.getParameter("id");
+		//Estas dentro del objeto como tal de shell
+        var sId    = oEvent.getParameter("id");
         var oShell = oEvent.oSource;
+        var oCore  = sap.ui.getCore();
+        
         switch (sId) {
         case "WI_home":
-                oShell.setContent(oHTML);
+        		var viewMaterialesIn = oCore.byId("indexV1--matView");
+                oShell.setContent(viewMaterialesIn);
                 break;
         case "WI_1_1":
-                oShell.setContent(oText);
-                break;
+        		//Se obtiene la vista, si no existe se crea
+        		var viewConsultaPrecios = sap.ui.getCore().byId("indexV1--consultaPreciosView");
+        		if(viewConsultaPrecios == null){
+        			viewGral = oCore.byId("indexV1");
+        			viewConsultaPrecios= sap.ui.view({
+                		id: viewGral.getController().createId("consultaPreciosView"), 
+                		viewName: "views.consultas.listaPrecios", 
+                		type: sap.ui.core.mvc.ViewType.JS});
+        		}
+        		oShell.setContent(viewConsultaPrecios);
+        		break;
         case "WI_1_2":
                 oShell.setContent(oButton);
                 break;
